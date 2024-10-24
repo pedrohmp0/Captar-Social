@@ -1,11 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Captar Social - Centro de Esporte e Cultura da Zona Oeste</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>testando funcionalidades git</p>
+    <!-- Cabeçalho com o Menu -->
+    <header>
+        <div class="logo">
+            <h1>Captar Social</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#instrutores">Instrutores</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Home com Slider de Imagens -->
+    <section id="home">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide" style="background-image: url(arquivos/pexels-lucasandrade-2862718.jpg);">
+                    <div class="content">
+                        <h1>Esforço Hoje, Vitória Amanhã</h1>
+                        <p>O caminho para o sucesso é feito de dedicação.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url(arquivos/pexels-mangalassery-978695.jpg);">
+                    <div class="content">
+                        <h1>Unidos Pelo Futebol</h1>
+                        <p>Juntos somos mais fortes em campo.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url(arquivos/pexels-micaasato-1198174.jpg);">
+                    <div class="content">
+                        <h1>Superação em Cada Passe</h1>
+                        <p>Cada desafio nos torna mais fortes.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('arquivos/pexels-zac-frith-325758-918798.jpg');">
+                    <div class="content">
+                        <h1>Jogue com o Coração</h1>
+                        <p>A paixão pelo futebol nos une.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outras seções como placeholders -->
+    <section id="novidades">
+        <h2>Novidades</h2>
+    </section>
+
+    <section id="quem-somos">
+        <h2>Quem Somos</h2>
+    </section>
+
+    <section id="profissionais">
+        <h2>Profissionais</h2>
+    </section>
+
+    <section id="fale-conosco">
+        <h2>Fale Conosco</h2>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Captar Social - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
