@@ -1,5 +1,6 @@
 let slideIndex = 0;
 let slides = document.querySelectorAll('.slide');
+let instructorIndex = 0;
 let dots = document.querySelectorAll('.dot');
 let autoSlideInterval;
 
@@ -15,20 +16,20 @@ function showSlides(n) {
 function plusSlides(n) {
     slideIndex += n;
     showSlides(slideIndex);
-    resetAutoSlide(); // Reinicia o intervalo após interação manual
+    resetAutoSlide(); 
 }
 
 function currentSlide(n) {
     slideIndex = n;
     showSlides(slideIndex);
-    resetAutoSlide(); // Reinicia o intervalo após interação manual
+    resetAutoSlide(); 
 }
 
 function autoSlide() {
     autoSlideInterval = setInterval(() => {
         slideIndex++;
         showSlides(slideIndex);
-    }, 6000); // 6 segundos
+    }, 6000); 
 }
 
 function resetAutoSlide() {
@@ -36,12 +37,48 @@ function resetAutoSlide() {
     autoSlide();
 }
 
+function showInstructorSlides(index) {
+    const slides = document.querySelectorAll('.instructor-card');
+    const slidesContainer = document.querySelector('.instructors-slides');
+    const slideWidth = slides[0].offsetWidth + 20; // Inclui o gap
+
+    if (index >= slides.length) instructorIndex = 0;
+    if (index < 0) instructorIndex = slides.length - 1;
+
+    const offset = instructorIndex * -slideWidth;
+    slidesContainer.style.transform = `translateX(${offset}px)`;
+}
+
+function openFullscreenModal(imageSrc, name, description) {
+    const modal = document.getElementById("fullscreenModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalName = document.getElementById("modalName");
+    const modalDescription = document.getElementById("modalDescription");
+
+    modalImage.src = imageSrc;
+    modalName.textContent = name;
+    modalDescription.textContent = description;
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden"; // Desabilita o scroll
+}
+
+function closeFullscreenModal() {
+    const modal = document.getElementById("fullscreenModal");
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Reabilita o scroll
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeFullscreenModal();
+    }
+});
+
 window.onload = function() {
     showSlides(slideIndex);
     autoSlide();
 };
 
-// Iniciar com a primeira imagem
 showSlides(slideIndex);
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,14 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (sectionTop < screenPosition) {
             sobreSection.classList.add('visible');
-            window.removeEventListener('scroll', handleScroll); // Remove o listener após a animação inicial
+            window.removeEventListener('scroll', handleScroll); 
         }
     }
 
     window.addEventListener('scroll', handleScroll);
+    showInstructorSlides(instructorIndex);
 });
 
-// Menu transparente que muda ao rolar
+
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
@@ -71,4 +109,5 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
+document.querySelector('.prev').addEventListener('click', () => changeInstructorSlide(-1));
+document.querySelector('.next').addEventListener('click', () => changeInstructorSlide(1));

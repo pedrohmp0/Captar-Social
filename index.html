@@ -1,112 +1,137 @@
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Captar Social - Centro de Esporte e Cultura da Zona Oeste</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <!-- Cabeçalho com o Menu -->
-        <header>
-            <div class="logo">
-                <h1>Captar Social</h1>
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Captar Social - Centro de Esporte e Cultura da Zona Oeste</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <!-- Cabeçalho com o Menu -->
+            <header>
+                <div class="logo">
+                    <h1>Captar Social</h1>
+                </div>
+                <nav>
+
+                    <div class="mobile-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+
+                    <ul class="nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#instrutores">Instrutores</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="home">
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url(arquivos/pexels-lucasandrade-2862718.jpg);">
+                            <div class="content">
+                                <h1>Esforço Hoje, Vitória Amanhã</h1>
+                                <p>O caminho para o sucesso é feito de dedicação.</p>
+                            </div>
+                        </div>
+                        <div class="slide" style="background-image: url(arquivos/pexels-mangalassery-978695.jpg);">
+                            <div class="content">
+                                <h1>Unidos Pelo Futebol</h1>
+                                <p>Juntos somos mais fortes em campo.</p>
+                            </div>
+                        </div>
+                        <div class="slide" style="background-image: url(arquivos/pexels-micaasato-1198174.jpg);">
+                            <div class="content">
+                                <h1>Superação em Cada Passe</h1>
+                                <p>Cada desafio nos torna mais fortes.</p>
+                            </div>
+                        </div>
+                        <div class="slide" style="background-image: url('arquivos/pexels-zac-frith-325758-918798.jpg');">
+                            <div class="content">
+                                <h1>Jogue com o Coração</h1>
+                                <p>A paixão pelo futebol nos une.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="dots-container">
+                        <span class="dot" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </section>
+            <!-- Seção Sobre -->
+            <section id="sobre">
+                <div class="sobre-container">
+                    <div class="sobre-texto">
+                        <h2>Sobre o Captar Social</h2>
+                        <p class="texto-animado">O Captar Social é um projeto dedicado a promover inclusão, educação e desenvolvimento através do esporte. Localizado no coração da Zona Oeste do Rio de Janeiro, nossa escolinha de futebol gratuita oferece às crianças e adolescentes da região um espaço seguro e acolhedor para desenvolverem suas habilidades, tanto dentro quanto fora de campo.</p>
+                        <p class="texto-animado">Nosso propósito é transformar vidas. Acreditamos no poder do esporte como ferramenta de mudança social e, por isso, unimos paixão, dedicação e uma equipe de profissionais comprometidos para guiar cada jovem em sua trajetória de autoconhecimento e superação.</p>
+                        <p class="texto-animado">Com o apoio de voluntários e parceiros, estamos criando oportunidades e inspirando sonhos. No Captar Social, o foco não é apenas formar atletas, mas sim cidadãos conscientes e capacitados para enfrentar os desafios do futuro.</p>
+                    </div>
+                    <div class="sobre-imagem">
+                        <img src="https://via.placeholder.com/500x500" alt="Crianças jogando futebol no Captar Social">
+                    </div>
+                </div>
+            </section>
+            <section id="instrutores">
+                <h2>Conheça Nossos Instrutores</h2>
+                <div class="instructors-slider">
+                    <div class="prev">&#10094;</div>
+                    <div class="instructors-slides">
+                        <div class="instructor-card" onclick="openFullscreenModal('https://via.placeholder.com/280x200?text=Instrutor+1', 'João Silva', 'Especialista em técnicas avançadas de futebol.')">
+                            <img src="https://via.placeholder.com/280x200?text=Instrutor+1" alt="Instrutor">
+                            <h3>João Silva</h3>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ipsum quis voluptatem consequuntur labore soluta, dignissimos sit quasi temporibus veniam placeat sed nam aperiam? Ipsum voluptatibus cumque velit doloribus ipsam.</p>
+                            <a href="https://linkedin.com/in/joaosilva" target="_blank" class="linkedin-btn" onclick="event.stopPropagation();">LinkedIn</a>
+                        </div>
+                        <div class="instructor-card" onclick="openFullscreenModal('https://via.placeholder.com/280x200?text=Instrutor+1', 'João Silva', 'Especialista em técnicas avançadas de futebol.')">
+                            <img src="https://via.placeholder.com/280x200?text=Instrutor+1" alt="Instrutor">
+                            <h3>João Silva</h3>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ipsum quis voluptatem consequuntur labore soluta, dignissimos sit quasi temporibus veniam placeat sed nam aperiam? Ipsum voluptatibus cumque velit doloribus ipsam.</p>
+                            <a href="https://linkedin.com/in/joaosilva" target="_blank" class="linkedin-btn" onclick="event.stopPropagation();">LinkedIn</a>
+                        </div>
+                        <!-- Repita o .instructor-card para outros instrutores -->
+            </section>
+            <section id="novidades">
+                <h2>Novidades</h2>
+            </section>
+
+            <section id="quem-somos">
+                <h2>Quem Somos</h2>
+            </section>
+
+            <section id="profissionais">
+                <h2>Profissionais</h2>
+            </section>
+
+            <section id="fale-conosco">
+                <h2>Fale Conosco</h2>
+            </section>
+
+            <!-- Rodapé -->
+            <footer>
+                <p>&copy; 2024 Captar Social - Todos os direitos reservados.</p>
+            </footer>
+
+            <div id="fullscreenModal" class="modal" onclick="closeFullscreenModal()">
+                <span class="close" onclick="closeFullscreenModal()">&times;</span>
+                <img id="modalImage" src="" alt="">
+                <div class="modal-content">
+                    <h3 id="modalName"></h3>
+                    <p id="modalDescription"></p>
+                </div>
             </div>
-            <nav>
 
-                <div class="mobile-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-
-                <ul class="nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#instrutores">Instrutores</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section id="home">
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide" style="background-image: url(arquivos/pexels-lucasandrade-2862718.jpg);">
-                        <div class="content">
-                            <h1>Esforço Hoje, Vitória Amanhã</h1>
-                            <p>O caminho para o sucesso é feito de dedicação.</p>
-                        </div>
-                    </div>
-                    <div class="slide" style="background-image: url(arquivos/pexels-mangalassery-978695.jpg);">
-                        <div class="content">
-                            <h1>Unidos Pelo Futebol</h1>
-                            <p>Juntos somos mais fortes em campo.</p>
-                        </div>
-                    </div>
-                    <div class="slide" style="background-image: url(arquivos/pexels-micaasato-1198174.jpg);">
-                        <div class="content">
-                            <h1>Superação em Cada Passe</h1>
-                            <p>Cada desafio nos torna mais fortes.</p>
-                        </div>
-                    </div>
-                    <div class="slide" style="background-image: url('arquivos/pexels-zac-frith-325758-918798.jpg');">
-                        <div class="content">
-                            <h1>Jogue com o Coração</h1>
-                            <p>A paixão pelo futebol nos une.</p>
-                        </div>
-                    </div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <div class="dots-container">
-                    <span class="dot" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Sobre -->
-        <section id="sobre">
-            <div class="sobre-container">
-                <div class="sobre-texto">
-                    <h2>Sobre o Captar Social</h2>
-                    <p class="texto-animado">O Captar Social é um projeto dedicado a promover inclusão, educação e desenvolvimento através do esporte. Localizado no coração da Zona Oeste do Rio de Janeiro, nossa escolinha de futebol gratuita oferece às crianças e adolescentes da região um espaço seguro e acolhedor para desenvolverem suas habilidades, tanto dentro quanto fora de campo.</p>
-                    <p class="texto-animado">Nosso propósito é transformar vidas. Acreditamos no poder do esporte como ferramenta de mudança social e, por isso, unimos paixão, dedicação e uma equipe de profissionais comprometidos para guiar cada jovem em sua trajetória de autoconhecimento e superação.</p>
-                    <p class="texto-animado">Com o apoio de voluntários e parceiros, estamos criando oportunidades e inspirando sonhos. No Captar Social, o foco não é apenas formar atletas, mas sim cidadãos conscientes e capacitados para enfrentar os desafios do futuro.</p>
-                </div>
-                <div class="sobre-imagem">
-                    <img src="https://via.placeholder.com/500x500" alt="Crianças jogando futebol no Captar Social">
-                </div>
-            </div>
-        </section>
-
-        <section id="novidades">
-            <h2>Novidades</h2>
-        </section>
-
-        <section id="quem-somos">
-            <h2>Quem Somos</h2>
-        </section>
-
-        <section id="profissionais">
-            <h2>Profissionais</h2>
-        </section>
-
-        <section id="fale-conosco">
-            <h2>Fale Conosco</h2>
-        </section>
-
-        <!-- Rodapé -->
-        <footer>
-            <p>&copy; 2024 Captar Social - Todos os direitos reservados.</p>
-        </footer>
-
-        <script src="mobile-navbar.js"></script>
-        <script src="script.js"></script>
-        
-    </body>
-    </html>
+            <script src="mobile-navbar.js"></script>
+            <script src="script.js"></script>
+        </body>
+        </html>
